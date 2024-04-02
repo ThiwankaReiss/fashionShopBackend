@@ -1,3 +1,5 @@
 
 _
-java:S2094"BRemove this empty class, write its code or make it an "interface".(´ĞØ8¯·èÊé1
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8›öÿéé1
+S
+java:S6856$"6Bind path variable "customerId" to a method parameter.(‚úî˜8ÉÊ†êé1

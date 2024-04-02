@@ -1,4 +1,8 @@
 package org.example.service.custom;
 
-public interface CustomerService {
+import org.example.dto.CustomerDto;
+import org.example.entity.CustomerEntity;
+import org.example.service.CrudService;
+
+public interface CustomerService extends CrudService<CustomerDto, CustomerEntity> {
 }
