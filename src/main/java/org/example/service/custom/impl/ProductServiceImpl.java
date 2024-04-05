@@ -1,11 +1,8 @@
 package org.example.service.custom.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.dto.CustomerDto;
 import org.example.dto.ProductDto;
-import org.example.entity.CustomerEntity;
 import org.example.entity.ProductEntity;
-import org.example.repository.CustomerRepository;
 import org.example.repository.ProductRepository;
 import org.example.service.custom.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +23,6 @@ public class ProductServiceImpl implements ProductService {
     public ProductEntity save(ProductDto productDto) {
         return productRepository.save(mapper.convertValue(productDto, ProductEntity.class));
     }
-
     @Override
     public boolean delete(Long value) {
         if(productRepository.findById(value).isPresent()){
@@ -35,19 +31,16 @@ public class ProductServiceImpl implements ProductService {
         }
         return false;
     }
-
     @Override
     public List<ProductDto> getAll() {
         return StreamSupport.stream(productRepository.findAll().spliterator(), false)
                 .map(entity -> mapper.convertValue(entity, ProductDto.class))
                 .collect(Collectors.toList());
     }
-
     @Override
     public Long getNextId() throws SQLException {
         return productRepository.count() + 1;
     }
-
     @Override
     public ProductDto getById(Long id) {
         return productRepository.findById(id)

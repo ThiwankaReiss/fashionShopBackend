@@ -45,3 +45,11 @@ l
 <src/main/java/org/example/service/custom/ProductService.java,0\1\015a631a5ba45f29a88a52d5c80e38f2a3025c9a
 u
 Esrc/main/java/org/example/service/custom/impl/ProductServiceImpl.java,e\8\e85126d76d75ae467287f5f442a5252d835484b8
+i
+9src/main/java/org/example/service/GenericServiceImpl.java,c\c\ccb328f8d92edcc4a8481d878e2871041ec12657
+y
+Isrc/main/java/org/example/service/custom/impl/ProductTestServiceImpl.java,f\b\fb6b8ba1021392467ff7bd77768657ac6e55062d
+z
+Jsrc/main/java/org/example/controller/custom/impl/ProductContollerImpl.java,8\6\86b39827dfec5dc262884d396f6aa97d674f1d92
+{
+Ksrc/main/java/org/example/controller/custom/impl/ProductControllerImpl.java,0\d\0d9bb40cbd50326c3d6e32fb68629b42f9deba25
