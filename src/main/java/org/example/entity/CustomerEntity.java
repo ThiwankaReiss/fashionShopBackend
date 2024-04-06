@@ -17,7 +17,7 @@ import lombok.ToString;
 public class CustomerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
+    private Long id;
     private String userName;
     private String email;
     private String password;

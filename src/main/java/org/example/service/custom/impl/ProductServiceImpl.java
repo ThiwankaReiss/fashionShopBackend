@@ -2,13 +2,16 @@ package org.example.service.custom.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.dto.ProductDto;
+import org.example.entity.CustomerEntity;
+import org.example.entity.ProductDetailEntity;
 import org.example.entity.ProductEntity;
+import org.example.repository.ProductDetailRepository;
 import org.example.repository.ProductRepository;
 import org.example.service.custom.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -19,8 +22,10 @@ public class ProductServiceImpl implements ProductService {
     ObjectMapper mapper;
     @Autowired
     ProductRepository productRepository;
+
     @Override
     public ProductEntity save(ProductDto productDto) {
+
         return productRepository.save(mapper.convertValue(productDto, ProductEntity.class));
     }
     @Override

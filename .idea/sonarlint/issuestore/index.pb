@@ -31,8 +31,6 @@ d
 4src/main/java/org/example/entity/CustomerEntity.java,2\7\276c41b34b8dcb9630b7e834176cb12a81ff4c2e
 l
 <src/main/java/org/example/repository/CustomerRepository.java,b\2\b2d0fac719895649afdc53b399f1fa65fafbdcbd
-w
-Gsrc/main/java/org/example/controller/custom/impl/ProductController.java,5\e\5e5cb5302141fa412dca0355e71bfce4a06cfa05
 r
 Bsrc/main/java/org/example/controller/custom/ProductController.java,c\8\c88e92e6168ed4df3151b88e540d87d3bf703431
 ]
@@ -45,11 +43,11 @@ l
 <src/main/java/org/example/service/custom/ProductService.java,0\1\015a631a5ba45f29a88a52d5c80e38f2a3025c9a
 u
 Esrc/main/java/org/example/service/custom/impl/ProductServiceImpl.java,e\8\e85126d76d75ae467287f5f442a5252d835484b8
-i
-9src/main/java/org/example/service/GenericServiceImpl.java,c\c\ccb328f8d92edcc4a8481d878e2871041ec12657
-y
-Isrc/main/java/org/example/service/custom/impl/ProductTestServiceImpl.java,f\b\fb6b8ba1021392467ff7bd77768657ac6e55062d
-z
-Jsrc/main/java/org/example/controller/custom/impl/ProductContollerImpl.java,8\6\86b39827dfec5dc262884d396f6aa97d674f1d92
 {
 Ksrc/main/java/org/example/controller/custom/impl/ProductControllerImpl.java,0\d\0d9bb40cbd50326c3d6e32fb68629b42f9deba25
+i
+9src/main/java/org/example/entity/ProductDetailEntity.java,2\a\2ac5f819e4305fd1d070f1207e9110fc7396c66e
+q
+Asrc/main/java/org/example/repository/ProductDetailRepository.java,8\f\8f21613ef889b5354da4009caf97a22c1841ba47
+c
+3src/main/java/org/example/dto/ProductDetailDto.java,9\0\9050c6b3b978c77bb1463c2924cc2d0bec2f1492

@@ -6,22 +6,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @ToString
-public class ProductEntity {
+public class ProductDetailEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String category;
+    private Long productDetailId;
+    private double price;
     private double discount;
-    private double currentPrice;
-
+    private String changedDate;
+    private Long productId;
 
 }
