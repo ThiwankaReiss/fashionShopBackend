@@ -22,4 +22,5 @@ public class OrderEntity {
     private Double discountedPrice;
     private Long customerId;
     private String date;
+    private String time;
 }

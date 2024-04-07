@@ -15,5 +15,6 @@ public class OrderDto {
     private Double discountedPrice;
     private Long customerId;
     private String date;
+    private String time;
     private List<OrderDetailsEntity> list;
 }
