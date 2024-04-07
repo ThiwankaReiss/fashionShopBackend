@@ -2,6 +2,7 @@ package org.example.controller.custom.impl;
 
 import org.example.controller.custom.ProductController;
 import org.example.dto.ProductDto;
+import org.example.entity.ProductDetailEntity;
 import org.example.entity.ProductEntity;
 import org.example.service.custom.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +29,8 @@ public class ProductControllerImpl implements ProductController {
     public Long getNextId() throws SQLException { return service.getNextId();}
     @GetMapping("/product/{productId}")
     @Override
-    public ProductDto getById(@PathVariable Long id) { return service.getById(id);}
+    public ProductDto getById(@PathVariable Long productId) { return service.getById(productId);}
+    @GetMapping("/product/history/{productId}")
+    @Override
+    public List<ProductDetailEntity> getListProductId(@PathVariable Long productId) { return service.getListProductId(productId);}
 }

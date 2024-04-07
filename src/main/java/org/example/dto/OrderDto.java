@@ -6,14 +6,14 @@ import lombok.NoArgsConstructor;
 import org.example.entity.OrderDetailsEntity;
 
 import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProductDto {
+public class OrderDto {
     private Long id;
-    private String name;
-    private String category;
-    private double discount;
-    private double currentPrice;
+    private Double totalPrice;
+    private Double discountedPrice;
+    private Long customerId;
+    private String date;
+    private List<OrderDetailsEntity> list;
 }

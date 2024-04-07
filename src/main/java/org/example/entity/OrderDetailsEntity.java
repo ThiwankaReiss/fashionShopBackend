@@ -14,13 +14,12 @@ import lombok.ToString;
 @NoArgsConstructor
 @Entity
 @ToString
-public class ProductDetailEntity {
+public class OrderDetailsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long productDetailId;
-    private double price;
-    private double discount;
-    private String changedDate;
-    private String changedTime;
+    private Long id;
+    private Long orderId;
     private Long productId;
+    private Double price;
+    private Integer quantity;
 }

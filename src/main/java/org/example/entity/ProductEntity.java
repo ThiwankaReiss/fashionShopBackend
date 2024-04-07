@@ -22,6 +22,4 @@ public class ProductEntity {
     private String category;
     private double discount;
     private double currentPrice;
-
-
 }

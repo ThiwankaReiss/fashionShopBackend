@@ -2,7 +2,6 @@ package org.example.service.custom.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.dto.ProductDto;
-import org.example.entity.CustomerEntity;
 import org.example.entity.ProductDetailEntity;
 import org.example.entity.ProductEntity;
 import org.example.repository.ProductDetailRepository;
@@ -10,8 +9,11 @@ import org.example.repository.ProductRepository;
 import org.example.service.custom.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -23,14 +25,26 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     ProductRepository productRepository;
 
+    @Autowired
+    ProductDetailRepository detailRepository;
+
     @Override
     public ProductEntity save(ProductDto productDto) {
 
-        return productRepository.save(mapper.convertValue(productDto, ProductEntity.class));
+        ProductEntity entity=productRepository.save(mapper.convertValue(productDto,ProductEntity.class));
+        detailRepository.save(new ProductDetailEntity(
+                null,entity.getCurrentPrice(),
+                entity.getDiscount(),
+                LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),
+                LocalTime.now().format( DateTimeFormatter.ofPattern("h.mm a")),
+                entity.getId()));
+        return entity;
     }
     @Override
     public boolean delete(Long value) {
         if(productRepository.findById(value).isPresent()){
+            List<ProductDetailEntity> productDetails = detailRepository.findByProductId(value);
+            detailRepository.deleteAll(productDetails);
             productRepository.deleteById(value);
             return true;
         }
@@ -51,5 +65,11 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findById(id)
                 .map(entity -> mapper.convertValue(entity, ProductDto.class))
                 .orElse(null);
+    }
+
+    @Override
+    public List<ProductDetailEntity> getListProductId(Long value) {
+        System.out.println(detailRepository.findByProductId(value));
+        return detailRepository.findByProductId(value);
     }
 }

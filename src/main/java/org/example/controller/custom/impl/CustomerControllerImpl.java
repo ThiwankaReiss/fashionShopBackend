@@ -31,9 +31,7 @@ public class CustomerControllerImpl implements CustomerController {
     }
     @GetMapping("/customerNextId")
     @Override
-    public Long getNextId() throws SQLException {
-        return service.getNextId();
-    }
+    public Long getNextId() throws SQLException { return service.getNextId(); }
     @GetMapping("/customer/{customerId}")
     @Override
     public CustomerDto getById(@PathVariable Long id) {
