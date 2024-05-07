@@ -1,0 +1,10 @@
+
+L	java:S106+"+Replace this use of System.out by a logger.(¾òçßşÿÿÿÿ8Ë®Õî1
+\	java:S899,";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ8üÊÀÕî1
+p
+java:S4042,"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ8ıÊÀÕî1
+L	java:S1061"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ8Ñ®Õî1
+Z
+java:S1874;"8Remove this use of "GoogleCredential"; it is deprecated.(ù±ôıÿÿÿÿ8 ËÀÕî1
+Z
+java:S1874;"8Remove this use of "GoogleCredential"; it is deprecated.(ù±ôıÿÿÿÿ8£ËÀÕî1

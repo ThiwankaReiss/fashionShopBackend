@@ -1,0 +1,25 @@
+
+e
+java:S1192"HDefine a constant instead of duplicating this literal "present" 6 times.(η—Φ8σια¨ς1
+Q
+java:S1066>"/Merge this if statement with the enclosing one.(νιθ΅ψÿÿÿÿ8Φδ¨ς1
+L
+java:S1066L"/Merge this if statement with the enclosing one.(ΙΣ 8€Χδ¨ς1
+Q
+java:S1066X"/Merge this if statement with the enclosing one.(χ—Ρ¤ώÿÿÿÿ8ΎΝ…©ς1
+a
+java:S2259<"DA "NullPointerException" could be thrown; "entity" is nullable here.(ΝΎ©Χ8’κα¨ς1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(κζΔή8’κα¨ς1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(κζΔή8’κα¨ς1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(ÒΉσ8”κα¨ς1
+d
+java:S1854"BRemove this useless assignment to local variable "customerEntity".(Ρ“α³όÿÿÿÿ8”κα¨ς1
+x
+java:S2159"VRemove this call to "equals"; comparisons between unrelated types always return false.(ϊ·ξλόÿÿÿÿ8–κα¨ς1
+U
+java:S1481"3Remove this unused "customerEntity" local variable.(Ρ“α³όÿÿÿÿ8–κα¨ς1
+o
+java:S6204v"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨Ή8κα¨ς1

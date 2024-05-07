@@ -1,0 +1,10 @@
+
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8òÒºë1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‚òÒºë1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8…òÒºë1
+o
+java:S62049"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8òÒºë1
+L	java:S106H"+Replace this use of System.out by a logger.(íØ²Æıÿÿÿÿ8‰ ğºë1
