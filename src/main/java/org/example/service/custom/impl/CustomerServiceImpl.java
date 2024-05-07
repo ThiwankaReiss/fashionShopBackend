@@ -21,6 +21,86 @@ public class CustomerServiceImpl implements CustomerService {
     CustomerRepository customerRepository;
     @Override
     public CustomerEntity save(CustomerDto customerDto) {
+        customerDto.setStatus("customer");
+        if(customerDto.getId()==null || customerDto.getId().equals("")){
+            CustomerEntity customerEntity=new CustomerEntity();
+            if(customerRepository.findByUserName(customerDto.getUserName()).isPresent()){
+                return new CustomerEntity(
+                     null,
+                     "present"  ,
+                        null,
+                        null,
+                        null,
+                        null
+                );
+            }
+            if(customerRepository.findByPassword(customerDto.getPassword()).isPresent()){
+                return new CustomerEntity(
+                        null,
+                        null  ,
+                        null,
+                        "present",
+                        null,
+                        null
+                );
+            }
+            if(customerRepository.findByEmail(customerDto.getEmail()).isPresent()){
+                return new CustomerEntity(
+                        null,
+                        null  ,
+                        "present",
+                        null,
+                        null,
+                        null
+                );
+            }
+        }else{
+            CustomerEntity entity=customerRepository.findByPassword(customerDto.getPassword()).orElse(null);
+
+            if(!entity.getUserName().equals(customerDto.getUserName())){
+
+                if(customerRepository.findByUserName(customerDto.getUserName()).isPresent()){
+
+                    return new CustomerEntity(
+                            null,
+                            "present"  ,
+                            null,
+                            null,
+                            null,
+                            null
+                    );
+                }
+
+            }
+            if(!entity.getPassword().equals(customerDto.getPassword())){
+                if(customerRepository.findByPassword(customerDto.getPassword()).isPresent()){
+                    return new CustomerEntity(
+                            null,
+                            null  ,
+                            null,
+                            "present",
+                            null,
+                            null
+                    );
+                }
+            }
+            if(!entity.getEmail().equals(customerDto.getEmail())){
+                if(customerRepository.findByEmail(customerDto.getEmail()).isPresent()){
+                    return new CustomerEntity(
+                            null,
+                            null  ,
+                            "present",
+                            null,
+                            null,
+                            null
+                    );
+                }
+            }
+
+
+
+        }
+
         return customerRepository.save(mapper.convertValue(customerDto,CustomerEntity.class));
     }
     @Override
@@ -46,5 +126,13 @@ public class CustomerServiceImpl implements CustomerService {
         return customerRepository.findById(id)
                 .map(entity -> mapper.convertValue(entity, CustomerDto.class))
                 .orElse(null);
+    }
+
+    public CustomerDto authCustomer(CustomerDto dto){
+
+        if(customerRepository.findByUserName(dto.getUserName()).isPresent() && customerRepository.findByPassword(dto.getPassword()).isPresent()){
+            return mapper.convertValue(customerRepository.findByUserName(dto.getUserName()).orElse(null),CustomerDto.class);
+        }
+        return null;
     }
 }

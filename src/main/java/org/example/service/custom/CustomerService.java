@@ -5,4 +5,5 @@ import org.example.entity.CustomerEntity;
 import org.example.service.CrudService;
 
 public interface CustomerService extends CrudService<CustomerDto, CustomerEntity> {
+    CustomerDto authCustomer(CustomerDto dto);
 }
